@@ -76,8 +76,8 @@ function Logos3({ heading = "Trusted by these companies", logos = defaultLogos, 
         <h2 className="my-6 text-2xl font-bold text-pretty lg:text-4xl">{heading}</h2>
       </div>
       <div className="pt-10 md:pt-12 lg:pt-16">
-        <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
-          <Carousel opts={{ loop: true }} plugins={[AutoScroll({ playOnInit: true, stopOnInteraction: false })]}>
+        <div className="relative mx-auto flex w-full max-w-full items-center justify-center overflow-hidden lg:max-w-5xl">
+          <Carousel className="w-full" opts={{ loop: true }} plugins={[AutoScroll({ playOnInit: true, stopOnInteraction: false })]}>
             <CarouselContent className="ml-0">
               {logos.map((logo) => (
                 <CarouselItem
