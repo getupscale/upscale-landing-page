@@ -110,10 +110,10 @@ export function FeaturesTabsSection() {
                     onClick={() => setActive(tab.id)}
                     data-testid={`features-tab-${tab.id}`}
                     className={cn(
-                      "flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+                      "flex shrink-0 items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium transition-colors",
                       selected
-                        ? "border-accent bg-accent/10 text-primary dark:text-text-dark"
-                        : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-surface-dark dark:text-gray-200 dark:hover:bg-white/5"
+                        ? "border-accent bg-secondary/30 text-primary shadow-sm dark:text-text-dark"
+                        : "border-gray-200 bg-white/50 text-gray-600 hover:bg-gray-50 dark:border-gray-700 dark:bg-surface-dark dark:text-gray-400 dark:hover:bg-white/5"
                     )}
                   >
                     <span className="material-symbols-outlined text-[18px]">{tab.icon}</span>
@@ -156,51 +156,51 @@ export function FeaturesTabsSection() {
           <div className="lg:col-span-7">
             <Card className="relative overflow-hidden border-none bg-transparent shadow-none">
               <div className="absolute -left-10 -top-10 h-60 w-60 rounded-full bg-secondary/30 blur-[60px] dark:bg-secondary/10" />
-              <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-surface-light p-2 shadow-2xl ring-1 ring-gray-900/5 dark:border-white/10 dark:bg-surface-dark dark:ring-white/10">
-                <div className="rounded-xl bg-white p-5 dark:bg-[#161616]">
-                  <div className="flex items-center justify-between">
+              <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-surface-light/50 p-3 shadow-2xl dark:border-white/10 dark:bg-surface-dark">
+                <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm dark:bg-[#161616]">
+                  <div className="mb-6 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="h-2.5 w-2.5 rounded-full bg-green-500" />
-                      <div className="text-xs font-medium text-gray-500 dark:text-gray-400">Live signals</div>
+                      <div className="font-mono text-[11px] uppercase tracking-wider text-gray-500 dark:text-gray-400">Live signals</div>
                     </div>
-                    <div className="rounded-full border border-gray-200 px-3 py-1 text-xs text-gray-600 dark:border-gray-700 dark:text-gray-300">
+                    <div className="rounded-lg border border-gray-100 px-3 py-1 text-xs text-gray-500 dark:border-gray-700 dark:text-gray-300">
                       {activeTab.label}
                     </div>
                   </div>
 
-                  <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                    <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-800/30">
-                      <div className="text-xs text-gray-500 dark:text-gray-400">Top issue</div>
-                      <div className="mt-1 font-serif text-lg">DSO creeping up</div>
-                      <div className="mt-3 flex items-center justify-between">
-                        <div className="text-xs text-gray-500 dark:text-gray-400">Impact</div>
-                        <div className="text-xs font-semibold text-green-600">High</div>
+                  <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border border-gray-100 bg-[#FDFBF7]/50 p-5 dark:border-gray-800 dark:bg-gray-800/30">
+                      <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400 dark:text-gray-500">Top issue</div>
+                      <div className="mt-1 font-serif text-xl text-primary/90 dark:text-white">DSO creeping up</div>
+                      <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3 dark:border-gray-800">
+                        <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400">Impact</div>
+                        <div className="font-mono text-[10px] font-bold uppercase text-green-600">High</div>
                       </div>
                     </div>
 
-                    <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-800/30">
-                      <div className="text-xs text-gray-500 dark:text-gray-400">Recommended move</div>
-                      <div className="mt-1 font-serif text-lg">Automate retry + outreach</div>
-                      <div className="mt-3 flex items-center justify-between">
-                        <div className="text-xs text-gray-500 dark:text-gray-400">ETA</div>
-                        <div className="text-xs font-semibold text-primary dark:text-text-dark">15 min</div>
+                    <div className="rounded-xl border border-gray-100 bg-[#FDFBF7]/50 p-5 dark:border-gray-800 dark:bg-gray-800/30">
+                      <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400 dark:text-gray-500">Recommended move</div>
+                      <div className="mt-1 font-serif text-xl text-primary/90 dark:text-white">Automate retry + outreach</div>
+                      <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3 dark:border-gray-800">
+                        <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400">ETA</div>
+                        <div className="font-mono text-[10px] font-bold uppercase text-primary dark:text-text-dark">15 min</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-4 rounded-xl border border-secondary/30 bg-secondary/10 p-4">
-                    <div className="mb-2 flex items-center justify-between">
-                      <div className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Action queue</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400">3 pending</div>
+                  <div className="mt-6 rounded-xl border border-secondary/20 bg-secondary/5 p-6">
+                    <div className="mb-4 flex items-center justify-between">
+                      <div className="font-mono text-[11px] uppercase tracking-wider text-gray-500 dark:text-gray-400">Action queue</div>
+                      <div className="font-mono text-[11px] text-gray-400">3 pending</div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {["Failed payments spike", "Renewal risk: 5 accounts", "Invoice aging: 30+ days"].map((item) => (
-                        <div key={item} className="flex items-center justify-between rounded-lg bg-white px-3 py-2 text-sm shadow-sm dark:bg-surface-dark">
-                          <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-[18px] text-accent">fiber_manual_record</span>
-                            <span className="text-gray-700 dark:text-gray-200">{item}</span>
+                        <div key={item} className="flex items-center justify-between rounded-xl border border-gray-50 bg-white px-4 py-3 text-sm shadow-sm dark:border-gray-800 dark:bg-surface-dark">
+                          <div className="flex items-center gap-3">
+                            <div className="h-1.5 w-1.5 rounded-full border border-gray-400" />
+                            <span className="font-mono text-gray-700 dark:text-gray-200">{item}</span>
                           </div>
-                          <span className="text-xs font-medium text-gray-500 dark:text-gray-400">Review</span>
+                          <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Review</span>
                         </div>
                       ))}
                     </div>

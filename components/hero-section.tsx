@@ -52,12 +52,38 @@ export function HeroSection() {
                 <div className="font-mono text-xs text-gray-400">dashboard_view.js</div>
               </div>
               <div className="grid grid-cols-1 gap-3 sm:h-full sm:grid-cols-12 sm:gap-2 md:gap-6">
-                <div className="col-span-1 flex flex-col gap-2 border-b border-gray-100 pb-3 dark:border-gray-800 sm:col-span-3 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-2 md:col-span-2 md:gap-4 md:pr-4">
-                  <div className="mb-4 h-8 w-24 rounded bg-gray-100 dark:bg-gray-800" />
-                  <div className="h-4 w-full rounded bg-gray-50 dark:bg-gray-800/50" />
-                  <div className="h-4 w-3/4 rounded bg-gray-50 dark:bg-gray-800/50" />
-                  <div className="hidden h-4 w-5/6 rounded bg-gray-50 dark:bg-gray-800/50 sm:block" />
-                  <div className="mt-auto h-12 w-full rounded-lg bg-secondary/20" />
+                <div className="col-span-1 flex flex-col gap-2 border-b border-gray-100 bg-secondary/10 pb-3 dark:border-gray-800 sm:col-span-3 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-2 md:col-span-2 md:gap-4 md:pr-4">
+                  <div className="mb-4 flex h-8 w-24 items-center rounded bg-white px-2 dark:bg-gray-800">
+                    <div className="h-2 w-2 rounded-full bg-accent mr-2" />
+                    <div className="h-2 w-12 rounded bg-secondary dark:bg-gray-600" />
+                  </div>
+                  <div className="flex items-center gap-2 rounded-md bg-white/50 py-1 pl-1 pr-2 shadow-sm dark:bg-white/5">
+                    <span className="material-symbols-outlined text-[14px] text-accent">dashboard</span>
+                    <span className="text-[10px] font-bold text-primary dark:text-gray-300">Overview</span>
+                  </div>
+                  <div className="flex items-center gap-2 py-1 pl-1">
+                    <span className="material-symbols-outlined text-[14px] text-gray-400">payments</span>
+                    <span className="text-[10px] font-medium text-gray-500">Cashflow</span>
+                  </div>
+                  <div className="flex items-center gap-2 py-1 pl-1">
+                    <span className="material-symbols-outlined text-[14px] text-gray-400">receipt_long</span>
+                    <span className="text-[10px] font-medium text-gray-500">Invoices</span>
+                  </div>
+                  <div className="flex items-center gap-2 py-1 pl-1">
+                    <span className="material-symbols-outlined text-[14px] text-gray-400">warning</span>
+                    <span className="text-[10px] font-medium text-gray-500">Risk Desk</span>
+                  </div>
+                  <div className="flex items-center gap-2 py-1 pl-1">
+                    <span className="material-symbols-outlined text-[14px] text-gray-400">monitoring</span>
+                    <span className="text-[10px] font-medium text-gray-500">Analytics</span>
+                  </div>
+                  <div className="mt-auto flex flex-col gap-2">
+                    <div className="h-[1px] w-full bg-gray-100 dark:bg-gray-800" />
+                    <div className="flex items-center gap-2 py-1">
+                      <span className="material-symbols-outlined text-[14px] text-gray-400">settings</span>
+                      <span className="text-[10px] font-medium text-gray-400">Settings</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="col-span-1 flex flex-col gap-3 sm:col-span-6 md:col-span-7 md:gap-6">
                   <div className="flex items-end justify-between">
@@ -69,34 +95,56 @@ export function HeroSection() {
                       <span className="material-symbols-outlined mr-1 text-xs sm:text-sm">trending_up</span> +12.4%
                     </div>
                   </div>
-                  <div className="relative flex-grow overflow-hidden rounded-lg border border-gray-100 bg-gray-50 dark:border-gray-800 dark:bg-gray-800/30">
+                  <div className="relative flex-grow overflow-hidden rounded-lg border border-gray-100 bg-gray-50/50 p-2 dark:border-gray-800 dark:bg-gray-800/30">
+                    <div className="absolute inset-0 grid grid-cols-6 gap-0 opacity-[0.03] dark:opacity-[0.05]">
+                      {[...Array(6)].map((_, i) => (
+                        <div key={i} className="border-r border-black dark:border-white" />
+                      ))}
+                    </div>
+                    <div className="absolute inset-0 grid grid-rows-4 gap-0 opacity-[0.03] dark:opacity-[0.05]">
+                      {[...Array(4)].map((_, i) => (
+                        <div key={i} className="border-b border-black dark:border-white" />
+                      ))}
+                    </div>
                     <svg
-                      className="absolute bottom-0 left-0 right-0 h-32 w-full fill-current text-accent/20"
+                      className="absolute bottom-0 left-0 right-0 h-32 w-full fill-current text-accent/10"
                       preserveAspectRatio="none"
                       viewBox="0 0 100 20"
                     >
-                      <path d="M0,20 L0,10 C10,12 20,5 30,8 C40,11 50,2 60,6 C70,10 80,4 90,8 C95,10 100,0 100,0 L100,20 Z" />
+                      <path d="M0,20 L0,14 C5,13 10,15 15,13 C20,11 25,12 30,10 C35,8 40,11 45,9 C50,7 55,8 60,11 C65,14 70,12 75,10 C80,8 85,9 90,6 C95,3 100,5 100,5 L100,20 Z" />
                     </svg>
                     <svg
-                      className="absolute bottom-0 left-0 right-0 h-32 w-full fill-none stroke-current stroke-2 text-accent"
+                      className="absolute bottom-0 left-0 right-0 h-32 w-full fill-none stroke-current stroke-[1.5] text-accent"
                       preserveAspectRatio="none"
                       viewBox="0 0 100 20"
                     >
-                      <path d="M0,10 C10,12 20,5 30,8 C40,11 50,2 60,6 C70,10 80,4 90,8 C95,10 100,0 100,0" />
+                      <path d="M0,14 C5,13 10,15 15,13 C20,11 25,12 30,10 C35,8 40,11 45,9 C50,7 55,8 60,11 C65,14 70,12 75,10 C80,8 85,9 90,6 C95,3 100,5 100,5" />
                     </svg>
+                    <div className="absolute bottom-2 left-0 right-0 flex justify-between px-2 text-[8px] text-gray-400">
+                      <span>Jan</span>
+                      <span>Feb</span>
+                      <span>Mar</span>
+                      <span>Apr</span>
+                      <span>May</span>
+                      <span>Jun</span>
+                    </div>
                   </div>
                   <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4">
-                    <div className="h-24 rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-800/30">
-                      <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/30">
-                        <span className="material-symbols-outlined text-sm">attach_money</span>
+                    <div className="h-24 rounded-lg border border-gray-100 bg-white p-3 shadow-sm dark:border-gray-800 dark:bg-gray-800/30">
+                      <div className="mb-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/30">
+                        <span className="material-symbols-outlined text-[14px]">calendar_today</span>
                       </div>
-                      <div className="h-2 w-16 rounded bg-gray-200 dark:bg-gray-700" />
+                      <div className="text-[10px] text-gray-400">Avg. DSO</div>
+                      <div className="text-sm font-bold">24 Days</div>
+                      <div className="text-[8px] text-green-500">↓ 4 days from last mo</div>
                     </div>
-                    <div className="h-24 rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-800 dark:bg-gray-800/30">
-                      <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/30">
-                        <span className="material-symbols-outlined text-sm">analytics</span>
+                    <div className="h-24 rounded-lg border border-gray-100 bg-white p-3 shadow-sm dark:border-gray-800 dark:bg-gray-800/30">
+                      <div className="mb-2 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/30">
+                        <span className="material-symbols-outlined text-[14px]">account_balance_wallet</span>
                       </div>
-                      <div className="h-2 w-16 rounded bg-gray-200 dark:bg-gray-700" />
+                      <div className="text-[10px] text-gray-400">Net Burn</div>
+                      <div className="text-sm font-bold">$124,000</div>
+                      <div className="text-[8px] text-gray-400">On track for Q4</div>
                     </div>
                   </div>
                 </div>
@@ -105,15 +153,21 @@ export function HeroSection() {
                     <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
                     <span className="text-xs font-medium uppercase tracking-wider text-gray-500">Upscale AI</span>
                   </div>
-                  <div className="rounded border border-gray-100 bg-white p-3 shadow-sm dark:border-gray-700 dark:bg-surface-dark">
-                    <div className="mb-2 h-2 w-full rounded bg-gray-200 dark:bg-gray-700" />
-                    <div className="h-2 w-2/3 rounded bg-gray-200 dark:bg-gray-700" />
+                  <div className="flex flex-col gap-2">
+                    <div className="rounded border border-gray-100 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-surface-dark">
+                      <div className="mb-1 text-[10px] font-bold text-gray-800 dark:text-gray-200">Flagged: 12 Overdue Invoices</div>
+                      <div className="text-[8px] text-gray-400">Aging bucket &gt; 60 days. Risk: $42k</div>
+                    </div>
+                    <div className="rounded border border-gray-100 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-surface-dark">
+                      <div className="mb-1 text-[10px] font-bold text-gray-800 dark:text-gray-200">Action: Net-30 Optimization</div>
+                      <div className="text-[8px] text-gray-400">Switch 4 vendors to early payment terms.</div>
+                    </div>
+                    <div className="rounded border border-gray-100 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-surface-dark">
+                      <div className="mb-1 text-[10px] font-bold text-gray-800 dark:text-gray-200">Insight: Churn Signal</div>
+                      <div className="text-[8px] text-gray-400">Stripe activity dropped 20% for top client.</div>
+                    </div>
                   </div>
-                  <div className="rounded border border-gray-100 bg-white p-3 shadow-sm dark:border-gray-700 dark:bg-surface-dark">
-                    <div className="mb-2 h-2 w-full rounded bg-gray-200 dark:bg-gray-700" />
-                    <div className="h-2 w-3/4 rounded bg-gray-200 dark:bg-gray-700" />
-                  </div>
-                  <button className="mt-auto w-full rounded bg-primary py-2 text-center text-xs text-white">Execute</button>
+                  <button className="mt-auto w-full rounded bg-primary py-2 text-center text-xs font-bold text-white shadow-md hover:bg-gray-800">Execute Actions</button>
                 </div>
               </div>
             </div>
