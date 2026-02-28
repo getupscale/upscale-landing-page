@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
+import { WaitlistModal } from "@/components/waitlist/waitlist-modal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,9 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-background-light font-sans antialiased text-text-light transition-colors duration-300 dark:bg-background-dark dark:text-text-dark">
+      <body className="overflow-x-hidden bg-background-light font-sans antialiased text-text-light transition-colors duration-300 dark:bg-background-dark dark:text-text-dark">
         <div className={`${inter.variable} ${instrumentSerif.variable}`}>
           {children}
+          <WaitlistModal />
         </div>
       </body>
     </html>
