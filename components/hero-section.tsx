@@ -12,7 +12,7 @@ export function HeroSection() {
       className="mx-auto max-w-7xl px-4 pb-16 pt-32 text-center sm:px-6 md:pb-24 md:pt-40 lg:px-8"
     >
       <div className="mb-8 inline-flex items-center rounded-full border border-secondary/50 bg-secondary/30 px-3 py-1 text-xs font-medium text-primary dark:text-white">
-        <span className="mr-2">✨</span> Outcome-priced operations agent
+        <span className="mr-2">✨</span> Autonomous Finance Operations
       </div>
       <RotatingHeroHeadline />
       <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400 md:text-xl">
