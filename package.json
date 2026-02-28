@@ -6,20 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@fontsource/material-symbols-outlined": "5.2.31",
     "@radix-ui/react-slot": "1.2.3",
+    "@supabase/supabase-js": "^2.98.0",
+    "@typeform/embed": "^5.10.0",
     "class-variance-authority": "0.7.1",
     "embla-carousel-auto-scroll": "8.6.0",
     "embla-carousel-react": "8.6.0",
     "lucide-react": "0.542.0",
     "next": "^16.1.6",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "resend": "^6.9.3",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/forms": "0.5.10",
     "@tailwindcss/typography": "0.5.16",
     "@types/node": "24.3.0",
