@@ -1,6 +1,6 @@
 import { AdvantageSection } from "@/components/advantage-section";
 import { AutopilotSection } from "@/components/autopilot-section";
-import { Logos3Demo } from "@/components/blocks/logos3";
+// import { Logos3Demo } from "@/components/blocks/logos3";
 import { CtaSection } from "@/components/cta-section";
 import { FlexibilitySection } from "@/components/flexibility-section";
 import { FeaturesTabsSection } from "@/components/features-tabs-section";
@@ -15,7 +15,7 @@ export default function Page() {
       <Navbar />
       <HeroSection />
       <FeaturesTabsSection />
-      <Logos3Demo />
+      {/* <Logos3Demo /> */}
       <HowItWorksSection />
       <AdvantageSection />
       <AutopilotSection />
