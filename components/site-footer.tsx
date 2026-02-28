@@ -4,14 +4,18 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
           <div className="col-span-1 sm:col-span-2 lg:col-span-2">
-            <span className="mb-4 block font-serif text-2xl font-bold tracking-tight">Upscale</span>
+            <span className="mb-4 block font-serif text-2xl font-bold tracking-tight">
+              Upscale
+            </span>
             <p className="mb-4 max-w-xs text-sm text-gray-500 dark:text-gray-400">
-              The operational brain for modern businesses. Diagnosis, recommendation, and execution-all in one
-              place.
+              The operational brain for modern businesses. Diagnosis,
+              recommendation, and execution-all in one place.
             </p>
             <div className="flex space-x-4">
               <a className="text-gray-400 hover:text-accent" href="#">
-                <span className="material-symbols-outlined">alternate_email</span>
+                <span className="material-symbols-outlined">
+                  alternate_email
+                </span>
               </a>
               <a className="text-gray-400 hover:text-accent" href="#">
                 <span className="material-symbols-outlined">public</span>
@@ -22,16 +26,16 @@ export function SiteFooter() {
           {[
             {
               title: "Product",
-              links: ["Features", "Integrations", "Pricing", "Changelog"]
+              links: ["Features", "Integrations", "Pricing", "Changelog"],
             },
             {
               title: "Company",
-              links: ["About", "Blog", "Careers", "Contact"]
+              links: ["About", "Blog", "Careers", "Contact"],
             },
             {
               title: "Legal",
-              links: ["Privacy", "Terms", "Security"]
-            }
+              links: ["Privacy", "Terms", "Security"],
+            },
           ].map((group) => (
             <div key={group.title}>
               <h4 className="mb-4 font-bold">{group.title}</h4>
@@ -48,7 +52,9 @@ export function SiteFooter() {
           ))}
         </div>
         <div className="flex flex-col items-center justify-between border-t border-gray-100 pt-6 dark:border-gray-800 md:flex-row md:pt-8">
-          <p className="text-xs text-gray-400">© 2024 Upscale Inc. All rights reserved.</p>
+          <p className="text-xs text-gray-400">
+            © 2026 Upscale Inc. All rights reserved.
+          </p>
           <div className="mt-4 flex items-center gap-2 md:mt-0">
             <div className="h-2 w-2 rounded-full bg-green-500" />
             <span className="text-xs text-gray-400">System Operational</span>
