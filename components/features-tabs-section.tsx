@@ -156,8 +156,8 @@ export function FeaturesTabsSection() {
           <div className="lg:col-span-7">
             <Card className="relative overflow-hidden border-none bg-transparent shadow-none">
               <div className="absolute -left-10 -top-10 h-60 w-60 rounded-full bg-secondary/30 blur-[60px] dark:bg-secondary/10" />
-              <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-surface-light/50 p-3 shadow-2xl dark:border-white/10 dark:bg-surface-dark">
-                <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm dark:bg-[#161616]">
+              <div className="relative overflow-hidden rounded-2xl border border-white/40 bg-white/30 p-3 shadow-2xl backdrop-blur-md dark:border-white/10 dark:bg-surface-dark/30">
+                <div className="rounded-xl border border-white/50 bg-white/80 p-6 shadow-sm backdrop-blur-sm dark:bg-[#161616]/80">
                   <div className="mb-6 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="h-2.5 w-2.5 rounded-full bg-green-500" />
@@ -169,7 +169,7 @@ export function FeaturesTabsSection() {
                   </div>
 
                   <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div className="rounded-xl border border-gray-100 bg-[#FDFBF7]/50 p-5 dark:border-gray-800 dark:bg-gray-800/30">
+                    <div className="rounded-xl border border-white/40 bg-white/60 p-5 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-800/30">
                       <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400 dark:text-gray-500">Top issue</div>
                       <div className="mt-1 font-serif text-xl text-primary/90 dark:text-white">DSO creeping up</div>
                       <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3 dark:border-gray-800">
@@ -188,7 +188,7 @@ export function FeaturesTabsSection() {
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-xl border border-secondary/20 bg-secondary/5 p-6">
+                  <div className="mt-6 rounded-xl border border-white/40 bg-secondary/10 p-6 backdrop-blur-sm">
                     <div className="mb-4 flex items-center justify-between">
                       <div className="font-mono text-[11px] uppercase tracking-wider text-gray-500 dark:text-gray-400">Action queue</div>
                       <div className="font-mono text-[11px] text-gray-400">3 pending</div>
