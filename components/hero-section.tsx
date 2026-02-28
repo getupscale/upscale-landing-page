@@ -1,5 +1,9 @@
+"use client";
+
 import { RotatingHeroHeadline } from "./rotating-hero-headline";
 import { Card } from "@/components/ui/card";
+import { openWaitlist } from "@/components/waitlist/open-waitlist";
+import { WAITLIST_CTA_TESTIDS } from "@/lib/waitlist-config";
 
 export function HeroSection() {
   return (
@@ -16,18 +20,22 @@ export function HeroSection() {
         moves, and executes - automatically.
       </p>
       <div className="mb-20 flex flex-col justify-center gap-4 sm:flex-row">
-        <a
+        <button
+          type="button"
+          onClick={openWaitlist}
+          data-testid={WAITLIST_CTA_TESTIDS.heroPrimary}
           className="flex items-center justify-center rounded-full bg-primary px-8 py-3.5 font-medium text-white shadow-lg transition-all hover:scale-105 hover:bg-gray-800"
-          href="#"
         >
           <span className="material-symbols-outlined mr-2 text-[20px]">bolt</span> Get Early Access
-        </a>
-        <a
+        </button>
+        <button
+          type="button"
+          onClick={openWaitlist}
+          data-testid={WAITLIST_CTA_TESTIDS.heroSecondary}
           className="flex items-center justify-center rounded-full border border-gray-200 bg-white px-8 py-3.5 font-medium text-text-light transition-all hover:bg-gray-50 dark:border-gray-700 dark:bg-surface-dark dark:text-text-dark dark:hover:bg-gray-800"
-          href="#demo"
         >
           <span className="material-symbols-outlined mr-2 text-[20px]">play_circle</span> See How It Works
-        </a>
+        </button>
       </div>
 
       <Card className="relative mx-auto mt-12 max-w-5xl overflow-hidden border-none bg-transparent shadow-none">
@@ -43,15 +51,15 @@ export function HeroSection() {
                 </div>
                 <div className="font-mono text-xs text-gray-400">dashboard_view.js</div>
               </div>
-              <div className="grid grid-cols-12 gap-2 sm:h-full md:gap-6">
-                <div className="col-span-3 flex flex-col gap-2 border-r border-gray-100 pr-2 dark:border-gray-800 md:col-span-2 md:gap-4 md:pr-4">
+              <div className="grid grid-cols-1 gap-3 sm:h-full sm:grid-cols-12 sm:gap-2 md:gap-6">
+                <div className="col-span-1 flex flex-col gap-2 border-b border-gray-100 pb-3 dark:border-gray-800 sm:col-span-3 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-2 md:col-span-2 md:gap-4 md:pr-4">
                   <div className="mb-4 h-8 w-24 rounded bg-gray-100 dark:bg-gray-800" />
                   <div className="h-4 w-full rounded bg-gray-50 dark:bg-gray-800/50" />
                   <div className="h-4 w-3/4 rounded bg-gray-50 dark:bg-gray-800/50" />
                   <div className="hidden h-4 w-5/6 rounded bg-gray-50 dark:bg-gray-800/50 sm:block" />
                   <div className="mt-auto h-12 w-full rounded-lg bg-secondary/20" />
                 </div>
-                <div className="col-span-6 flex flex-col gap-3 md:col-span-7 md:gap-6">
+                <div className="col-span-1 flex flex-col gap-3 sm:col-span-6 md:col-span-7 md:gap-6">
                   <div className="flex items-end justify-between">
                     <div>
                       <div className="mb-1 text-xs text-gray-400 sm:text-sm">Total Cashflow Velocity</div>
@@ -74,7 +82,7 @@ export function HeroSection() {
                       preserveAspectRatio="none"
                       viewBox="0 0 100 20"
                     >
-                      <path d="M0,10 C10,12 20,5 30,8 C40,11 50,2 60,6 C70,10 80,4 90,8 C95,10 100,0" />
+                      <path d="M0,10 C10,12 20,5 30,8 C40,11 50,2 60,6 C70,10 80,4 90,8 C95,10 100,0 100,0" />
                     </svg>
                   </div>
                   <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4">
@@ -92,7 +100,7 @@ export function HeroSection() {
                     </div>
                   </div>
                 </div>
-                <div className="col-span-3 flex flex-col gap-2 rounded-lg border border-secondary/20 bg-secondary/10 p-2 md:col-span-3 md:gap-3 md:p-4">
+                <div className="col-span-1 flex flex-col gap-2 rounded-lg border border-secondary/20 bg-secondary/10 p-2 sm:col-span-3 md:gap-3 md:p-4">
                   <div className="mb-2 flex items-center gap-2">
                     <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
                     <span className="text-xs font-medium uppercase tracking-wider text-gray-500">Upscale AI</span>

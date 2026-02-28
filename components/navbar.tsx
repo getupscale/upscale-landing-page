@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { getNavbarShrinkPercent, getNavbarSideInsetPercent } from "@/lib/navbar-shrink";
 import { ThemeToggle } from "./theme-toggle";
+import { openWaitlist } from "@/components/waitlist/open-waitlist";
+import { WAITLIST_CTA_TESTIDS } from "@/lib/waitlist-config";
 
 export function Navbar() {
   const [shrinkPercent, setShrinkPercent] = useState(10);
@@ -46,9 +48,14 @@ export function Navbar() {
         </div>
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <a className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800" href="#">
+          <button
+            type="button"
+            onClick={openWaitlist}
+            data-testid={WAITLIST_CTA_TESTIDS.navbar}
+            className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
+          >
             Get Early Access
-          </a>
+          </button>
         </div>
       </div>
     </nav>

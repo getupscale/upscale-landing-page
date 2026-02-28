@@ -1,3 +1,8 @@
+"use client";
+
+import { openWaitlist } from "@/components/waitlist/open-waitlist";
+import { WAITLIST_CTA_TESTIDS } from "@/lib/waitlist-config";
+
 export function CtaSection() {
   return (
     <section className="bg-background-light px-4 py-24 dark:bg-background-dark sm:px-6 lg:px-8" id="faq">
@@ -15,10 +20,20 @@ export function CtaSection() {
             Join the fastest growing companies who use Upscale to automate their financial nervous system.
           </p>
           <div className="relative z-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <button className="flex items-center justify-center rounded-full bg-primary px-8 py-4 font-bold text-white shadow-xl transition-transform hover:scale-105 hover:bg-gray-800">
+            <button
+              type="button"
+              onClick={openWaitlist}
+              data-testid={WAITLIST_CTA_TESTIDS.ctaPrimary}
+              className="flex items-center justify-center rounded-full bg-primary px-8 py-4 font-bold text-white shadow-xl transition-transform hover:scale-105 hover:bg-gray-800"
+            >
               <span className="material-symbols-outlined mr-2">bolt</span> Get Early Access
             </button>
-            <button className="flex items-center justify-center rounded-full border-2 border-primary bg-transparent px-8 py-4 font-bold text-primary transition-colors hover:bg-white/50">
+            <button
+              type="button"
+              onClick={openWaitlist}
+              data-testid={WAITLIST_CTA_TESTIDS.ctaSecondary}
+              className="flex items-center justify-center rounded-full border-2 border-primary bg-transparent px-8 py-4 font-bold text-primary transition-colors hover:bg-white/50"
+            >
               Book a Demo
             </button>
           </div>
