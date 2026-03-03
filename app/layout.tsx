@@ -28,12 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${instrumentSerif.variable}`}>
       <body className="overflow-x-hidden bg-background-light font-sans antialiased text-text-light transition-colors duration-300 dark:bg-background-dark dark:text-text-dark">
-        <div className={`${inter.variable} ${instrumentSerif.variable}`}>
-          {children}
-          <WaitlistModal />
-        </div>
+        {children}
+        <WaitlistModal />
       </body>
     </html>
   );
