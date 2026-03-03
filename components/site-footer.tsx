@@ -4,7 +4,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
           <div className="col-span-1 sm:col-span-2 lg:col-span-2">
-            <span className="mb-4 block font-serif text-2xl font-bold tracking-tight">
+            <span className="mb-4 block font-serif text-2xl tracking-tight">
               Upscale
             </span>
             <p className="mb-4 max-w-xs text-sm text-gray-500 dark:text-gray-400">

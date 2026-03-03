@@ -30,7 +30,7 @@ export function Navbar() {
         className="mx-auto flex h-20 w-full max-w-[1820px] items-center justify-between rounded-full border border-gray-300/60 bg-background-light/95 px-6 shadow-soft backdrop-blur-md transition-all duration-300 dark:border-gray-700/70 dark:bg-surface-dark/95 sm:px-10"
       >
         <div className="flex shrink-0 items-center">
-          <span className="font-serif text-2xl font-bold tracking-tight">Upscale</span>
+          <span className="font-serif text-2xl tracking-tight">Upscale</span>
         </div>
         <div className="hidden items-center gap-10 md:flex">
           <a className="text-sm font-medium transition-colors hover:text-accent" href="#product">

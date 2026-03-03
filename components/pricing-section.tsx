@@ -55,7 +55,7 @@ export function PricingSection() {
                 </div>
               ) : null}
               <h3 className="mb-2 text-xl font-bold">{plan.name}</h3>
-              <div className="mb-4 font-serif text-3xl font-bold">
+              <div className="mb-4 font-serif text-3xl">
                 {plan.price}
                 {plan.cadence ? (
                   <span

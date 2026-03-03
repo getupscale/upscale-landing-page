@@ -89,7 +89,7 @@ export function HeroSection() {
                   <div className="flex items-end justify-between">
                     <div>
                       <div className="mb-1 text-xs text-gray-400 sm:text-sm">Total Cashflow Velocity</div>
-                      <div className="font-serif text-base font-bold sm:text-3xl">$2,840,920.00</div>
+                      <div className="font-serif text-base sm:text-3xl font-medium">$2,840,920.00</div>
                     </div>
                     <div className="flex items-center text-xs font-medium text-green-500 sm:text-sm">
                       <span className="material-symbols-outlined mr-1 text-xs sm:text-sm">trending_up</span> +12.4%
