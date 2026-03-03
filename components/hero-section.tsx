@@ -12,7 +12,7 @@ export function HeroSection() {
       className="mx-auto max-w-7xl px-4 pb-16 pt-32 text-center sm:px-6 md:pb-24 md:pt-40 lg:px-8"
     >
       <div className="mb-8 inline-flex items-center rounded-full border border-secondary/50 bg-secondary/30 px-3 py-1 text-xs font-medium text-primary dark:text-white">
-        <span className="mr-2">✨</span> Outcome-priced operations agent
+        <span className="mr-2">✨</span> Autonomous Finance Operations
       </div>
       <RotatingHeroHeadline />
       <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400 md:text-xl">
@@ -40,8 +40,8 @@ export function HeroSection() {
 
       <Card className="relative mx-auto mt-12 max-w-5xl overflow-hidden border-none bg-transparent shadow-none">
         <div className="absolute -top-20 left-1/2 -z-10 h-3/4 w-3/4 -translate-x-1/2 rounded-full bg-secondary/20 blur-[100px] dark:bg-secondary/5" />
-        <div className="relative rounded-2xl border border-white/20 bg-surface-light p-2 shadow-2xl ring-1 ring-gray-900/5 dark:border-white/10 dark:bg-surface-dark dark:ring-white/10">
-          <div className="relative overflow-hidden rounded-xl bg-white shadow-sm dark:bg-[#1A1A1A] sm:aspect-[16/9]">
+        <div className="relative rounded-2xl border border-white/20 bg-white/40 p-2 shadow-2xl backdrop-blur-md ring-1 ring-gray-900/5 dark:border-white/10 dark:bg-surface-dark/40 dark:ring-white/10">
+          <div className="relative overflow-hidden rounded-xl border border-white/30 bg-white/80 shadow-sm backdrop-blur-sm dark:bg-[#1A1A1A]/80 sm:aspect-[16/9]">
             <div className="flex flex-col p-3 sm:absolute sm:inset-0 sm:p-6">
               <div className="mb-3 flex items-center justify-between border-b border-gray-100 pb-3 dark:border-gray-800 sm:mb-6 sm:pb-4">
                 <div className="flex gap-2">
@@ -130,7 +130,7 @@ export function HeroSection() {
                     </div>
                   </div>
                   <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4">
-                    <div className="h-24 rounded-lg border border-gray-100 bg-white p-3 shadow-sm dark:border-gray-800 dark:bg-gray-800/30">
+                    <div className="h-24 rounded-lg border border-white/40 bg-white/60 p-3 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-800/30">
                       <div className="mb-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900/30">
                         <span className="material-symbols-outlined text-[14px]">calendar_today</span>
                       </div>
@@ -138,7 +138,7 @@ export function HeroSection() {
                       <div className="text-sm font-bold">24 Days</div>
                       <div className="text-[8px] text-green-500">↓ 4 days from last mo</div>
                     </div>
-                    <div className="h-24 rounded-lg border border-gray-100 bg-white p-3 shadow-sm dark:border-gray-800 dark:bg-gray-800/30">
+                    <div className="h-24 rounded-lg border border-white/40 bg-white/60 p-3 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-800/30">
                       <div className="mb-2 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/30">
                         <span className="material-symbols-outlined text-[14px]">account_balance_wallet</span>
                       </div>
@@ -148,7 +148,7 @@ export function HeroSection() {
                     </div>
                   </div>
                 </div>
-                <div className="col-span-1 flex flex-col gap-2 rounded-lg border border-secondary/20 bg-secondary/10 p-2 sm:col-span-3 md:gap-3 md:p-4">
+                <div className="col-span-1 flex flex-col gap-2 rounded-lg border border-white/40 bg-secondary/10 p-2 backdrop-blur-sm sm:col-span-3 md:gap-3 md:p-4">
                   <div className="mb-2 flex items-center gap-2">
                     <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
                     <span className="text-xs font-medium uppercase tracking-wider text-gray-500">Upscale AI</span>
