@@ -8,10 +8,12 @@ import { HeroSection } from "@/components/hero-section";
 import { HowItWorksSection } from "@/components/how-it-works-section";
 import { Navbar } from "@/components/navbar";
 import { SiteFooter } from "@/components/site-footer";
+import { FluidBackground } from "@/components/FluidBackground";
 
 export default function Page() {
   return (
-    <main>
+    <main className="relative">
+      <FluidBackground />
       <Navbar />
       <HeroSection />
       <FeaturesTabsSection />

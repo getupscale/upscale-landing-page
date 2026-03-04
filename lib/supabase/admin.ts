@@ -2,6 +2,7 @@ import "server-only";
 
 import { createClient } from "@supabase/supabase-js";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let cached: any | null = null;
 
 function requireEnv(name: string) {
@@ -13,6 +14,7 @@ function requireEnv(name: string) {
 export function getSupabaseAdmin() {
   if (cached) return cached;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   cached = createClient<any>(requireEnv("SUPABASE_URL"), requireEnv("SUPABASE_SERVICE_ROLE_KEY"), {
     auth: {
       autoRefreshToken: false,

@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { getNavbarShrinkPercent, getNavbarSideInsetPercent } from "@/lib/navbar-shrink";
-import { ThemeToggle } from "./theme-toggle";
 import { openWaitlist } from "@/components/waitlist/open-waitlist";
 import { WAITLIST_CTA_TESTIDS } from "@/lib/waitlist-config";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar() {
   const [shrinkPercent, setShrinkPercent] = useState(10);
@@ -27,32 +27,32 @@ export function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-4 z-50 transition-all duration-300" style={{ paddingInline: `${sideInsetPercent}%` }}>
       <div
-        className="mx-auto flex h-20 w-full max-w-[1820px] items-center justify-between rounded-full border border-gray-300/60 bg-background-light/95 px-6 shadow-soft backdrop-blur-md transition-all duration-300 dark:border-gray-700/70 dark:bg-surface-dark/95 sm:px-10"
+        className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between rounded-full glass-panel px-6 transition-all duration-300 sm:px-8"
       >
-        <div className="flex shrink-0 items-center">
-          <span className="font-serif text-2xl tracking-tight">Upscale</span>
+        <div className="flex shrink-0 items-center gap-2">
+          {/* Logo removed as requested */}
         </div>
-        <div className="hidden items-center gap-10 md:flex">
-          <a className="text-sm font-medium transition-colors hover:text-accent" href="#product">
+        <div className="hidden items-center gap-8 md:flex">
+          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#product">
             Product
           </a>
-          <a className="text-sm font-medium transition-colors hover:text-accent" href="#how-it-works">
+          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#how-it-works">
             How it works
           </a>
-          <a className="text-sm font-medium transition-colors hover:text-accent" href="#security">
+          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#security">
             Security
           </a>
-          <a className="text-sm font-medium transition-colors hover:text-accent" href="#faq">
+          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#faq">
             FAQ
           </a>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center gap-4">
           <ThemeToggle />
           <button
             type="button"
             onClick={openWaitlist}
             data-testid={WAITLIST_CTA_TESTIDS.navbar}
-            className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
+            className="rounded-full bg-text-primary px-5 py-2 text-sm font-medium text-background transition-transform hover:scale-105"
           >
             Get Early Access
           </button>
