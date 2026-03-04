@@ -19,7 +19,10 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: "Upscale - Your Operational Brain",
   description:
-    "Upscale is an AI-powered agent that diagnoses what is broken, recommends high-leverage moves, and executes automatically."
+    "Upscale is an AI-powered agent that diagnoses what is broken, recommends high-leverage moves, and executes automatically.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -28,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${instrumentSerif.variable}`}>
-      <body className="overflow-x-hidden bg-background-light font-sans antialiased text-text-light transition-colors duration-300 dark:bg-background-dark dark:text-text-dark">
+    <html lang="en" className={`dark scroll-smooth ${inter.variable} ${instrumentSerif.variable}`}>
+      <body className="overflow-x-hidden font-sans antialiased transition-colors duration-300 bg-black text-white selection:bg-white/20">
         {children}
         <WaitlistModal />
       </body>
