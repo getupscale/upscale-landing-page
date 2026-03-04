@@ -4,6 +4,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: #F4F1EC;
+    --surface: #F4F1EC;
+    --surface-2: #EAF1EC;
+    --border: #D9D4CC;
+    --border-2: #D9D4CC;
+    --text-primary: #0E0E0E;
+    --text-muted: #7A756E;
+    --text-faint: #3A4A5C;
+    --green: #3B6B4A;
+    --green-dim: #82A98E;
+    --amber: #B84C27;
+    --amber-dim: #C9922A;
+  }
+
+  .dark {
+    --background: #0C0D0B;
+    --surface: #131410;
+    --surface-2: #1A1C17;
+    --border: #262820;
+    --border-2: #2E3028;
+    --text-primary: #E8E6DF;
+    --text-muted: #6B6B5E;
+    --text-faint: #3A3C33;
+    --green: #7CB87A;
+    --green-dim: #2A3D28;
+    --amber: #C9A84C;
+    --amber-dim: #2E2610;
+  }
+}
+
 body {
   font-feature-settings: "cv11", "ss01";
 }

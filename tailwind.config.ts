@@ -11,13 +11,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#FFFFFF",
-        secondary: "#A1A1AA",
-        accent: "#4F46E5", // Indigo for high contrast CTAs
-        background: "#000000",
-        surface: "#09090B",
-        "surface-light": "rgba(255, 255, 255, 0.05)",
-        "surface-border": "rgba(255, 255, 255, 0.1)",
+        background: "var(--background)",
+        surface: "var(--surface)",
+        surface2: "var(--surface-2)",
+        border: "var(--border)",
+        border2: "var(--border-2)",
+        "text-primary": "var(--text-primary)",
+        "text-muted": "var(--text-muted)",
+        "text-faint": "var(--text-faint)",
+        green: {
+          DEFAULT: "var(--green)",
+          dim: "var(--green-dim)",
+        },
+        amber: {
+          DEFAULT: "var(--amber)",
+          dim: "var(--amber-dim)",
+        },
+
+        // Retaining for compatibility with untouched components, but mapped to text-primary where appropriate
+        primary: "var(--text-primary)",
+        secondary: "var(--text-muted)",
+        accent: "var(--green)",
+        "surface-light": "var(--surface-2)",
+        "surface-border": "var(--border)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

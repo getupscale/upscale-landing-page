@@ -8,8 +8,7 @@ export function SiteFooter() {
               Upscale
             </span>
             <p className="mb-4 max-w-xs text-sm text-gray-500 dark:text-gray-400">
-              The operational brain for modern businesses. Diagnosis,
-              recommendation, and execution-all in one place.
+              The AI copilot and operational brain for modern and growing businesses.
             </p>
             <div className="flex space-x-4">
               <a className="text-gray-400 hover:text-accent" href="#">

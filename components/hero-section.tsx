@@ -13,13 +13,9 @@ export function HeroSection() {
       className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-40 text-center sm:px-6 md:pb-24 md:pt-48 lg:px-8"
     >
       <AnimatedSection>
-        <div className="mb-8 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md">
-          <span className="mr-2">✨</span> Autonomous Finance Operations
-        </div>
         <RotatingHeroHeadline />
         <p className="mx-auto mb-12 max-w-2xl text-lg leading-relaxed text-secondary md:text-xl">
-          Upscale is an AI-powered agent that diagnoses what&apos;s broken, recommends the highest-leverage
-          moves, and executes - automatically.
+          The AI copilot and operational brain for modern and growing businesses.
         </p>
         <div className="mb-24 flex flex-col justify-center gap-4 sm:flex-row">
           <button

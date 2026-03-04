@@ -28,7 +28,7 @@ export const FluidBackground = () => {
         }}
       />
       <motion.div
-        className="absolute top-[40%] -right-[10%] w-[50vw] h-[50vw] rounded-full blur-[120px] bg-purple-600/10"
+        className="absolute top-[40%] -right-[10%] w-[50vw] h-[50vw] rounded-full blur-[120px] bg-amber-dim/10"
         animate={{
           x: [0, -60, 30, 0],
           y: [0, 50, -20, 0],
@@ -41,7 +41,7 @@ export const FluidBackground = () => {
         }}
       />
       <motion.div
-        className="absolute -bottom-[20%] left-[20%] w-[70vw] h-[70vw] rounded-full blur-[150px] bg-blue-600/10"
+        className="absolute -bottom-[20%] left-[20%] w-[70vw] h-[70vw] rounded-full blur-[150px] bg-green-dim/10"
         animate={{
           x: [0, 40, -40, 0],
           y: [0, -40, 20, 0],
