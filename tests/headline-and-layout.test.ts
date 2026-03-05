@@ -52,8 +52,7 @@ describe("RotatingHeroHeadline", () => {
     expect(screen.queryByText(/on the Go/i)).toBeNull();
     expect(screen.queryByText(/in Flow/i)).toBeNull();
     expect(screen.queryByText(/to Grow/i)).toBeNull();
-    },
-    15000
+    }
   );
 });
 
