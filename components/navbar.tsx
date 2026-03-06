@@ -29,34 +29,31 @@ export function Navbar() {
       <div
         className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between rounded-full glass-panel px-6 transition-all duration-300 sm:px-8"
       >
-        <div className="flex shrink-0 items-center gap-2">
-          {/* Logo removed as requested */}
+        <div className="flex-1 flex justify-center pl-28">
+          <div className="hidden items-center gap-8 md:flex">
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#product">
+              Product
+            </a>
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#how-it-works">
+              How it works
+            </a>
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#security">
+              Security
+            </a>
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#faq">
+              FAQ
+            </a>
+            <ThemeToggle />
+          </div>
         </div>
-        <div className="hidden items-center gap-8 md:flex">
-          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#product">
-            Product
-          </a>
-          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#how-it-works">
-            How it works
-          </a>
-          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#security">
-            Security
-          </a>
-          <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#faq">
-            FAQ
-          </a>
-        </div>
-        <div className="flex items-center gap-4">
-          <ThemeToggle />
-          <button
-            type="button"
-            onClick={openWaitlist}
-            data-testid={WAITLIST_CTA_TESTIDS.navbar}
-            className="rounded-full bg-text-primary px-5 py-2 text-sm font-medium text-background transition-transform hover:scale-105"
-          >
-            Get Early Access
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={openWaitlist}
+          data-testid={WAITLIST_CTA_TESTIDS.navbar}
+          className="rounded-full bg-text-primary px-5 py-2 text-sm font-medium text-background transition-transform hover:scale-105"
+        >
+          Get Early Access
+        </button>
       </div>
     </nav>
   );
