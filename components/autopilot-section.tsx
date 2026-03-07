@@ -5,6 +5,7 @@ export function AutopilotSection() {
     <section className="overflow-hidden py-24" id="security">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-16 md:flex-row">
+          
           <div className="md:w-1/2">
             <div className="mb-4 inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
               Autopilot
@@ -16,28 +17,8 @@ export function AutopilotSection() {
               Upscale has the latest AI models built in, so it can help you identify revenue leakage and plug
               it instantly. No more manual CSV exports or endless dashboard checking.
             </p>
-            <div className="rounded-xl border-l-4 border-accent bg-secondary/10 p-6">
-              <p className="mb-4 text-lg italic text-gray-800 dark:text-gray-200">
-                &quot;The addiction is real - at this point I cannot imagine running finance without it. It is like
-                having a CFO in my pocket.&quot;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 overflow-hidden rounded-full bg-gray-300">
-                  <Image
-                    alt="Portrait"
-                    className="h-full w-full rounded-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuChmWoEhS_nxYs-_hBOa9fLuaHNCt7rhAfBlnYOGKBdSMOkmok8mDDZ-YSjcyZvv_cArrJ8oO1VjyTLUwvBeeoV41P_sQPERKPm2oC6Y2IxhZfy7yrgYchmDq22CNlte8r2fK-M43r8_HukekFP-15fal_bclGbZjUMmaqAD3kRdTkqXY1S5xMs3ZeXxX_tCM3JS2o4QK6NDSL2kKzcQGNK0uL9M8dpMWTti8IHWpINLIwRVKjI9O0lREEPWEDUPMiuhnbeORB2qdU4"
-                    width={40}
-                    height={40}
-                  />
-                </div>
-                <div>
-                  <div className="text-sm font-bold">Sarah Jenks</div>
-                  <div className="text-xs text-gray-500">COO, TechFlow</div>
-                </div>
-              </div>
-            </div>
           </div>
+
           <div className="relative md:w-1/2">
             <div className="relative z-10 mx-auto max-w-md rounded-2xl border border-gray-100 bg-white p-6 shadow-2xl dark:border-gray-800 dark:bg-surface-dark">
               <div className="flex flex-col gap-4">
@@ -78,6 +59,7 @@ export function AutopilotSection() {
             <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-secondary opacity-20 blur-2xl" />
             <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-accent opacity-10 blur-2xl" />
           </div>
+          
         </div>
       </div>
     </section>
