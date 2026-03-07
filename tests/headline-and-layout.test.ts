@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { act, cleanup, render, screen } from "@testing-library/react";
+import { act, cleanup, render, screen, within } from "@testing-library/react";
 import React from "react";
 
 import { RotatingHeroHeadline } from "@/components/rotating-hero-headline";
@@ -56,31 +56,42 @@ describe("RotatingHeroHeadline", () => {
   );
 });
 
-{/*
-// section for revision:
-
 describe("Marketing sections", () => {
   it("HeroSection renders waitlist CTAs", () => {
-    render(React.createElement(HeroSection));
-    expect(screen.getByTestId(WAITLIST_CTA_TESTIDS.heroPrimary)).toBeInTheDocument();
-    expect(screen.getByTestId(WAITLIST_CTA_TESTIDS.heroSecondary)).toBeInTheDocument();
+    const { container } = render(React.createElement(HeroSection));
+    const hero = container.querySelector("section#product");
+    expect(hero).not.toBeNull();
+
+    const heroQueries = within(hero as HTMLElement);
+    expect(heroQueries.getByTestId(WAITLIST_CTA_TESTIDS.heroPrimary)).toBeInTheDocument();
+    expect(heroQueries.getByRole("button", { name: /Get Early Access/i })).toBeInTheDocument();
+    expect(heroQueries.getByTestId(WAITLIST_CTA_TESTIDS.heroSecondary)).toBeInTheDocument();
+    expect(heroQueries.getByRole("button", { name: /See How It Works/i })).toBeInTheDocument();
   });
 
   it("FlexibilitySection renders key copy and example outputs", () => {
     render(React.createElement(FlexibilitySection));
-    expect(screen.getByText("Flexibility")).toBeInTheDocument();
-    expect(screen.getByText(/Get outputs in the format/i)).toBeInTheDocument();
-    expect(screen.getByText("Direct Slack/Teams Integration")).toBeInTheDocument();
-    expect(screen.getByText("Auto-populates Spreadsheets")).toBeInTheDocument();
-    expect(screen.getByText("Board-ready PDF Generation")).toBeInTheDocument();
+    const heading = screen.getByRole("heading", { level: 2, name: /Get outputs in the format/i });
+    const section = heading.closest("section");
+    expect(section).not.toBeNull();
+
+    const sectionQueries = within(section as HTMLElement);
+    expect(sectionQueries.getByText("Flexibility")).toBeInTheDocument();
+    expect(sectionQueries.getByRole("heading", { level: 2, name: /Get outputs in the format/i })).toBeInTheDocument();
+    expect(sectionQueries.getByText("Direct Slack/Teams Integration")).toBeInTheDocument();
+    expect(sectionQueries.getByText("Auto-populates Spreadsheets")).toBeInTheDocument();
+    expect(sectionQueries.getByText("Board-ready PDF Generation")).toBeInTheDocument();
   });
 
   it("SiteFooter renders brand and legal links", () => {
     render(React.createElement(SiteFooter));
-    expect(screen.getByText("Upscale")).toBeInTheDocument();
-    expect(screen.getByText("Privacy")).toBeInTheDocument();
-    expect(screen.getByText("Terms")).toBeInTheDocument();
-    expect(screen.getByText("Security")).toBeInTheDocument();
+    const footer = screen.getByRole("contentinfo");
+    const footerQueries = within(footer);
+
+    expect(footerQueries.getByText("Upscale")).toBeInTheDocument();
+    expect(footerQueries.getByRole("heading", { level: 4, name: "Legal" })).toBeInTheDocument();
+    expect(footerQueries.getByRole("link", { name: "Privacy" })).toBeInTheDocument();
+    expect(footerQueries.getByRole("link", { name: "Terms" })).toBeInTheDocument();
+    expect(footerQueries.getByRole("link", { name: "Security" })).toBeInTheDocument();
   });
 });
-*/}
