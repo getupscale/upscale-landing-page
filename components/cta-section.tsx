@@ -15,10 +15,13 @@ export function CtaSection() {
               backgroundSize: "20px 20px"
             }}
           />
+
           <h2 className="relative z-10 mb-6 font-serif text-4xl text-primary md:text-6xl">Stop Operating Blind.</h2>
+          
           <p className="relative z-10 mx-auto mb-10 max-w-2xl text-xl text-primary/80">
             Join the fastest growing companies who use Upscale to automate their financial nervous system.
           </p>
+
           <div className="relative z-10 flex flex-col justify-center gap-4 sm:flex-row">
             <button
               type="button"
@@ -26,7 +29,8 @@ export function CtaSection() {
               data-testid={WAITLIST_CTA_TESTIDS.ctaPrimary}
               className="flex items-center justify-center rounded-full bg-primary px-8 py-4 font-bold text-white shadow-xl transition-transform hover:scale-105 hover:bg-gray-800"
             >
-              <span className="material-symbols-outlined mr-2">bolt</span> Get Early Access
+              <span className="material-symbols-outlined mr-2">bolt</span> 
+              Get Early Access
             </button>
             <button
               type="button"
@@ -37,6 +41,7 @@ export function CtaSection() {
               Book a Demo
             </button>
           </div>
+          
         </div>
       </div>
     </section>

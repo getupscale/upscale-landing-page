@@ -12,11 +12,17 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
+        "background-light": "var(--background)",
+        "background-dark": "var(--background)",
         surface: "var(--surface)",
+        "surface-dark": "var(--surface)",
         surface2: "var(--surface-2)",
+        card: "var(--card)",
+        "card-foreground": "var(--card-foreground)",
         border: "var(--border)",
         border2: "var(--border-2)",
         "text-primary": "var(--text-primary)",
+        "text-dark": "var(--text-primary)",
         "text-muted": "var(--text-muted)",
         "text-faint": "var(--text-faint)",
         green: {

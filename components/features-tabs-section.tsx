@@ -83,7 +83,7 @@ export function FeaturesTabsSection() {
           <h2 className="font-serif text-4xl tracking-tight text-primary dark:text-text-dark sm:text-5xl">
             Notion-like clarity. Real execution.
           </h2>
-          <p className="mt-3 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+          <p className="mt-3 max-w-2xl text-lg text-text-muted">
             A single workflow from diagnosis to action—designed to feel calm, structured, and fast.
           </p>
         </div>
@@ -113,7 +113,7 @@ export function FeaturesTabsSection() {
                       "flex shrink-0 items-center gap-2 rounded-xl border px-4 py-2 text-sm font-medium transition-colors",
                       selected
                         ? "border-accent bg-secondary/30 text-primary shadow-sm dark:text-text-dark"
-                        : "border-gray-200 bg-white/50 text-gray-600 hover:bg-gray-50 dark:border-gray-700 dark:bg-surface-dark dark:text-gray-400 dark:hover:bg-white/5"
+                        : "border-border bg-card/50 text-text-muted hover:bg-surface2/50 dark:bg-surface-dark dark:hover:bg-surface2/20"
                     )}
                   >
                     <span className="material-symbols-outlined text-[18px]">{tab.icon}</span>
@@ -131,7 +131,7 @@ export function FeaturesTabsSection() {
               className="mt-5"
             >
               <h3 className="font-serif text-2xl text-primary dark:text-text-dark">{activeTab.headline}</h3>
-              <ul className="mt-4 space-y-3 text-sm text-gray-600 dark:text-gray-300">
+              <ul className="mt-4 space-y-3 text-sm text-text-muted">
                 {activeTab.bullets.map((b) => (
                   <li key={b} className="flex gap-2">
                     <span className="material-symbols-outlined mt-0.5 text-[18px] text-accent">check</span>
@@ -156,51 +156,51 @@ export function FeaturesTabsSection() {
           <div className="lg:col-span-7">
             <Card className="relative overflow-hidden border-none bg-transparent shadow-none">
               <div className="absolute -left-10 -top-10 h-60 w-60 rounded-full bg-secondary/30 blur-[60px] dark:bg-secondary/10" />
-              <div className="relative overflow-hidden rounded-2xl border border-white/40 bg-white/30 p-3 shadow-2xl backdrop-blur-md dark:border-white/10 dark:bg-surface-dark/30">
-                <div className="rounded-xl border border-white/50 bg-white/80 p-6 shadow-sm backdrop-blur-sm dark:bg-[#161616]/80">
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-card/30 p-3 shadow-2xl backdrop-blur-md">
+                <div className="rounded-xl border border-border bg-card/80 p-6 shadow-sm backdrop-blur-sm">
                   <div className="mb-6 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="h-2.5 w-2.5 rounded-full bg-green-500" />
-                      <div className="font-mono text-[11px] uppercase tracking-wider text-gray-500 dark:text-gray-400">Live signals</div>
+                      <div className="font-mono text-[11px] uppercase tracking-wider text-text-muted">Live signals</div>
                     </div>
-                    <div className="rounded-lg border border-gray-100 px-3 py-1 text-xs text-gray-500 dark:border-gray-700 dark:text-gray-300">
+                    <div className="rounded-lg border border-border px-3 py-1 text-xs text-text-muted">
                       {activeTab.label}
                     </div>
                   </div>
 
                   <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div className="rounded-xl border border-white/40 bg-white/60 p-5 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-800/30">
-                      <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400 dark:text-gray-500">Top issue</div>
-                      <div className="mt-1 font-serif text-xl text-primary/90 dark:text-white">DSO creeping up</div>
-                      <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3 dark:border-gray-800">
-                        <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400">Impact</div>
+                    <div className="rounded-xl border border-border bg-card/60 p-5 shadow-sm backdrop-blur-sm">
+                      <div className="font-mono text-[10px] uppercase tracking-tighter text-text-muted/80">Top issue</div>
+                      <div className="mt-1 font-serif text-xl text-primary/90 dark:text-text-dark">DSO creeping up</div>
+                      <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
+                        <div className="font-mono text-[10px] uppercase tracking-tighter text-text-muted/80">Impact</div>
                         <div className="font-mono text-[10px] font-bold uppercase text-green-600">High</div>
                       </div>
                     </div>
 
-                    <div className="rounded-xl border border-gray-100 bg-[#FDFBF7]/50 p-5 dark:border-gray-800 dark:bg-gray-800/30">
-                      <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400 dark:text-gray-500">Recommended move</div>
-                      <div className="mt-1 font-serif text-xl text-primary/90 dark:text-white">Automate retry + outreach</div>
-                      <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3 dark:border-gray-800">
-                        <div className="font-mono text-[10px] uppercase tracking-tighter text-gray-400">ETA</div>
+                    <div className="rounded-xl border border-border bg-card/50 p-5">
+                      <div className="font-mono text-[10px] uppercase tracking-tighter text-text-muted/80">Recommended move</div>
+                      <div className="mt-1 font-serif text-xl text-primary/90 dark:text-text-dark">Automate retry + outreach</div>
+                      <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
+                        <div className="font-mono text-[10px] uppercase tracking-tighter text-text-muted/80">ETA</div>
                         <div className="font-mono text-[10px] font-bold uppercase text-primary dark:text-text-dark">15 min</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-xl border border-white/40 bg-secondary/10 p-6 backdrop-blur-sm">
+                  <div className="mt-6 rounded-xl border border-border bg-secondary/10 p-6 backdrop-blur-sm">
                     <div className="mb-4 flex items-center justify-between">
-                      <div className="font-mono text-[11px] uppercase tracking-wider text-gray-500 dark:text-gray-400">Action queue</div>
-                      <div className="font-mono text-[11px] text-gray-400">3 pending</div>
+                      <div className="font-mono text-[11px] uppercase tracking-wider text-text-muted">Action queue</div>
+                      <div className="font-mono text-[11px] text-text-muted/80">3 pending</div>
                     </div>
                     <div className="space-y-3">
                       {["Failed payments spike", "Renewal risk: 5 accounts", "Invoice aging: 30+ days"].map((item) => (
-                        <div key={item} className="flex items-center justify-between rounded-xl border border-gray-50 bg-white px-4 py-3 text-sm shadow-sm dark:border-gray-800 dark:bg-surface-dark">
+                        <div key={item} className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 text-sm shadow-sm">
                           <div className="flex items-center gap-3">
                             <div className="h-1.5 w-1.5 rounded-full border border-gray-400" />
                             <span className="font-mono text-gray-700 dark:text-gray-200">{item}</span>
                           </div>
-                          <span className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Review</span>
+                          <span className="font-mono text-[10px] uppercase tracking-widest text-text-muted/80">Review</span>
                         </div>
                       ))}
                     </div>

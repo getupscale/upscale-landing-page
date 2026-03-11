@@ -12,7 +12,7 @@ export function FlexibilitySection() {
             <h2 className="mb-6 font-serif text-4xl leading-tight md:text-5xl">
               Get outputs in the format <span className="italic text-accent">your team needs</span>
             </h2>
-            <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
+            <p className="mb-8 text-lg text-text-muted">
               Whether it is a Slack alert for sales, a CSV for accounting, or a PDF report for the board,
               Upscale formats intelligence perfectly for the destination.
             </p>
@@ -29,7 +29,7 @@ export function FlexibilitySection() {
           </div>
           <div className="w-full md:w-1/2">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <Card className="rounded-xl border border-gray-100 bg-white p-4 shadow-lg transition-transform duration-300 hover:rotate-0 sm:rotate-[-2deg] sm:transform dark:border-gray-800 dark:bg-surface-dark">
+              <Card className="rounded-xl border border-border bg-card p-4 shadow-lg transition-transform duration-300 hover:rotate-0 sm:rotate-[-2deg] sm:transform">
                 <div className="mb-3 flex items-center gap-2">
                   <div className="flex h-8 w-8 items-center justify-center rounded bg-blue-100 text-blue-600">
                     <span className="material-symbols-outlined text-sm">tag</span>
@@ -41,7 +41,7 @@ export function FlexibilitySection() {
                   <div className="h-2 w-3/4 rounded bg-gray-100 dark:bg-gray-800" />
                 </div>
               </Card>
-              <Card className="rounded-xl border border-gray-100 bg-white p-4 shadow-lg transition-transform duration-300 hover:rotate-0 sm:mt-8 sm:rotate-[3deg] sm:transform dark:border-gray-800 dark:bg-surface-dark">
+              <Card className="rounded-xl border border-border bg-card p-4 shadow-lg transition-transform duration-300 hover:rotate-0 sm:mt-8 sm:rotate-[3deg] sm:transform">
                 <div className="mb-3 flex items-center gap-2">
                   <div className="flex h-8 w-8 items-center justify-center rounded bg-green-100 text-green-600">
                     <span className="material-symbols-outlined text-sm">table_view</span>
@@ -58,7 +58,7 @@ export function FlexibilitySection() {
                   <div className="h-2 w-full rounded bg-gray-50 dark:bg-gray-900" />
                 </div>
               </Card>
-              <Card className="z-10 mx-auto w-full rounded-xl border border-gray-100 bg-white p-4 shadow-lg transition-transform duration-300 hover:rotate-0 sm:-mt-4 sm:col-span-2 sm:w-3/4 sm:rotate-[1deg] sm:transform dark:border-gray-800 dark:bg-surface-dark">
+              <Card className="z-10 mx-auto w-full rounded-xl border border-border bg-card p-4 shadow-lg transition-transform duration-300 hover:rotate-0 sm:-mt-4 sm:col-span-2 sm:w-3/4 sm:rotate-[1deg] sm:transform">
                 <div className="mb-3 flex items-center gap-2">
                   <div className="flex h-8 w-8 items-center justify-center rounded bg-red-100 text-red-600">
                     <span className="material-symbols-outlined text-sm">picture_as_pdf</span>

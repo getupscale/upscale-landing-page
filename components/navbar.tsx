@@ -31,16 +31,16 @@ export function Navbar() {
       >
         <div className="flex-1 flex justify-center pl-28">
           <div className="hidden items-center gap-8 md:flex">
-            <a className="text-sm font-medium text-gray-400 transition-colors hover:text-text-primary" href="#product">
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#product">
               Product
             </a>
-            <a className="text-sm font-medium text-gray-400 transition-colors hover:text-text-primary" href="#how-it-works">
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#how-it-works">
               How it works
             </a>
-            <a className="text-sm font-medium text-gray-400 transition-colors hover:text-text-primary" href="#security">
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#security">
               Security
             </a>
-            <a className="text-sm font-medium text-gray-400 transition-colors hover:text-text-primary" href="#faq">
+            <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#faq">
               FAQ
             </a>
             

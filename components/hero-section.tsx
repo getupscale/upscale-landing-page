@@ -7,6 +7,11 @@ import { WAITLIST_CTA_TESTIDS } from "@/lib/waitlist-config";
 import { AnimatedSection } from "./AnimatedSection";
 
 export function HeroSection() {
+  const onSeeHowItWorks = () => {
+    const el = document.getElementById("how-it-works");
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section
       id="product"
@@ -28,9 +33,9 @@ export function HeroSection() {
           </button>
           <button
             type="button"
-            onClick={openWaitlist}
+            onClick={onSeeHowItWorks}
             data-testid={WAITLIST_CTA_TESTIDS.heroSecondary}
-            className="glass-panel flex items-center justify-center rounded-full px-8 py-4 font-semibold text-white transition-all hover:bg-white/10"
+            className="glass-panel flex items-center justify-center rounded-full border border-border bg-card/60 px-8 py-4 font-semibold text-text-primary transition-all hover:bg-card/80 dark:border-white/20 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
           >
             <span className="material-symbols-outlined mr-2 text-[20px]">play_circle</span> See How It Works
           </button>
