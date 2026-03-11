@@ -200,18 +200,18 @@ export function WaitlistModal() {
         role="dialog"
         aria-modal="true"
         data-testid={WAITLIST_MODAL_TESTIDS.dialog}
-        className="w-full max-w-xl overflow-hidden rounded-2xl border border-white/30 bg-background-light shadow-2xl dark:border-white/10 dark:bg-surface-dark"
+        className="w-full max-w-xl overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-2xl"
       >
         <div className="flex items-center justify-between px-6 pb-4 pt-5">
           <div>
-            <div className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">Waitlist</div>
+            <div className="text-xs font-medium uppercase tracking-wider text-text-muted">Waitlist</div>
             <div className="font-serif text-2xl text-primary dark:text-text-dark">Get early access</div>
           </div>
           <button
             type="button"
             data-testid={WAITLIST_MODAL_TESTIDS.close}
             onClick={onClose}
-            className="rounded-full p-2 text-gray-500 transition-colors hover:bg-black/5 hover:text-gray-800 dark:hover:bg-white/10 dark:hover:text-white"
+            className="rounded-full p-2 text-text-muted transition-colors hover:bg-surface2/50 hover:text-text-primary"
             aria-label="Close"
           >
             <span className="material-symbols-outlined">close</span>
@@ -220,10 +220,10 @@ export function WaitlistModal() {
 
         <div className="px-6 pb-2">
           <div className="mb-4 flex items-center gap-3">
-            <div className="h-1.5 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800" data-testid={WAITLIST_MODAL_TESTIDS.progress}>
+            <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface2/70" data-testid={WAITLIST_MODAL_TESTIDS.progress}>
               <div className="h-full rounded-full bg-accent transition-all" style={{ width: `${progress}%` }} />
             </div>
-            <div className="w-12 text-right text-xs font-medium text-gray-500 dark:text-gray-400">{progress}%</div>
+            <div className="w-12 text-right text-xs font-medium text-text-muted">{progress}%</div>
           </div>
         </div>
 
@@ -234,7 +234,7 @@ export function WaitlistModal() {
                 <span className="material-symbols-outlined text-accent">check_circle</span>
                 <div className="font-serif text-xl">You’re on the list.</div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-sm text-text-muted">
                 We’ll email you when your slot opens. If you’re a good fit, we’ll also offer a short demo.
               </p>
               <div className="mt-4">
@@ -253,23 +253,23 @@ export function WaitlistModal() {
 
               {step === 0 ? (
                 <div>
-                  <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">What’s your work email?</div>
+                  <div className="mb-2 text-sm font-medium text-text-primary">What’s your work email?</div>
                   <input
                     ref={firstFieldRef}
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4 dark:border-gray-700 dark:bg-[#161616]"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4"
                     placeholder="name@company.com"
                     autoComplete="email"
                   />
                   <div className="mt-4">
-                    <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Name (optional)</div>
+                    <div className="mb-2 text-sm font-medium text-text-primary">Name (optional)</div>
                     <input
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4 dark:border-gray-700 dark:bg-[#161616]"
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4"
                       placeholder="Jane Doe"
                       autoComplete="name"
                       data-waitlist-enter="disabled"
@@ -280,19 +280,19 @@ export function WaitlistModal() {
 
               {step === 1 ? (
                 <div>
-                  <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Company</div>
+                  <div className="mb-2 text-sm font-medium text-text-primary">Company</div>
                   <input
                     ref={firstFieldRef}
                     type="text"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
-                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4 dark:border-gray-700 dark:bg-[#161616]"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4"
                     placeholder="TechFlow"
                     autoComplete="organization"
                   />
 
                   <div className="mt-4">
-                    <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Role</div>
+                    <div className="mb-2 text-sm font-medium text-text-primary">Role</div>
                     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                       {ROLES.map((r) => (
                         <button
@@ -303,7 +303,7 @@ export function WaitlistModal() {
                             "rounded-xl border px-3 py-2 text-sm transition-colors",
                             role === r
                               ? "border-accent bg-accent/10 text-primary dark:text-text-dark"
-                              : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-[#161616] dark:text-gray-200 dark:hover:bg-white/5"
+                              : "border-border bg-card text-text-primary hover:bg-surface2/50"
                           )}
                         >
                           {r}
@@ -316,7 +316,7 @@ export function WaitlistModal() {
 
               {step === 2 ? (
                 <div>
-                  <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Company size</div>
+                  <div className="mb-2 text-sm font-medium text-text-primary">Company size</div>
                   <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                     {COMPANY_SIZES.map((s) => (
                       <button
@@ -327,7 +327,7 @@ export function WaitlistModal() {
                           "rounded-xl border px-3 py-2 text-sm transition-colors",
                           companySize === s
                             ? "border-accent bg-accent/10 text-primary dark:text-text-dark"
-                            : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-[#161616] dark:text-gray-200 dark:hover:bg-white/5"
+                            : "border-border bg-card text-text-primary hover:bg-surface2/50"
                         )}
                       >
                         {s}
@@ -336,7 +336,7 @@ export function WaitlistModal() {
                   </div>
 
                   <div className="mt-4">
-                    <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Use cases (optional)</div>
+                    <div className="mb-2 text-sm font-medium text-text-primary">Use cases (optional)</div>
                     <div className="flex flex-wrap gap-2">
                       {USE_CASES.map((u) => {
                         const active = useCases.includes(u);
@@ -349,7 +349,7 @@ export function WaitlistModal() {
                               "rounded-full border px-3 py-1.5 text-xs transition-colors",
                               active
                                 ? "border-accent bg-accent/10 text-primary dark:text-text-dark"
-                                : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-[#161616] dark:text-gray-200 dark:hover:bg-white/5"
+                                : "border-border bg-card text-text-primary hover:bg-surface2/50"
                             )}
                           >
                             {u}
@@ -363,7 +363,7 @@ export function WaitlistModal() {
 
               {step === 3 ? (
                 <div>
-                  <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">Anything else? (optional)</div>
+                  <div className="mb-2 text-sm font-medium text-text-primary">Anything else? (optional)</div>
                   <textarea
                     ref={(node) => {
                       if (node) firstFieldRef.current = node as unknown as HTMLInputElement;
@@ -371,10 +371,10 @@ export function WaitlistModal() {
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
                     rows={5}
-                    className="w-full resize-none rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4 dark:border-gray-700 dark:bg-[#161616]"
+                    className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none ring-accent/40 focus:ring-4"
                     placeholder="Tell us what you want Upscale to automate first..."
                   />
-                  <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+                  <p className="mt-3 text-xs text-text-muted">
                     We’ll never share your email. This is a launch waitlist.
                   </p>
                 </div>
@@ -389,8 +389,8 @@ export function WaitlistModal() {
                   className={cn(
                     "rounded-full px-4 py-2 text-sm font-medium",
                     step === 0 || submitting
-                      ? "cursor-not-allowed text-gray-400"
-                      : "text-gray-700 hover:bg-black/5 dark:text-gray-200 dark:hover:bg-white/10"
+                      ? "cursor-not-allowed text-text-muted"
+                      : "text-text-primary hover:bg-surface2/50"
                   )}
                 >
                   Back

@@ -38,7 +38,7 @@ export function PricingSection() {
     <section id="pricing" className="bg-surface-light py-24 dark:bg-surface-dark">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-4 text-center font-serif text-4xl">Simple, Outcome-Based Pricing</h2>
-        <p className="mb-16 text-center text-gray-500">We only win when you win.</p>
+        <p className="mb-16 text-center text-text-muted">We only win when you win.</p>
         <div className="grid gap-8 md:grid-cols-3">
           {plans.map((plan) => (
             <div
@@ -46,7 +46,7 @@ export function PricingSection() {
               className={
                 plan.featured
                   ? "relative flex -translate-y-0 flex-col overflow-hidden rounded-2xl border border-transparent bg-primary p-8 text-white shadow-xl md:-translate-y-4"
-                  : "flex flex-col rounded-2xl border border-gray-200 bg-white p-8 transition-colors hover:border-accent dark:border-gray-800 dark:bg-background-dark"
+                  : "flex flex-col rounded-2xl border border-border bg-card p-8 text-card-foreground transition-colors hover:border-accent"
               }
             >
               {plan.featured ? (
@@ -60,15 +60,15 @@ export function PricingSection() {
                 {plan.cadence ? (
                   <span
                     className={`text-base font-normal font-sans ${
-                      plan.featured ? "text-gray-400" : "text-gray-500"
+                      plan.featured ? "text-white/70" : "text-text-muted"
                     }`}
                   >
                     {plan.cadence}
                   </span>
                 ) : null}
               </div>
-              <p className={`mb-6 text-sm ${plan.featured ? "text-gray-300" : "text-gray-500"}`}>{plan.subtitle}</p>
-              <ul className={`mb-8 flex-grow space-y-3 ${plan.featured ? "text-gray-200" : ""}`}>
+              <p className={`mb-6 text-sm ${plan.featured ? "text-white/80" : "text-text-muted"}`}>{plan.subtitle}</p>
+              <ul className={`mb-8 flex-grow space-y-3 ${plan.featured ? "text-white/90" : ""}`}>
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2 text-sm">
                     <span
@@ -86,7 +86,7 @@ export function PricingSection() {
                 className={
                   plan.featured
                     ? "block w-full rounded-lg bg-white py-3 text-center font-bold text-primary transition-colors hover:bg-gray-100"
-                    : "block w-full rounded-lg border border-gray-300 py-3 text-center font-medium transition-colors hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-800"
+                    : "block w-full rounded-lg border border-border py-3 text-center font-medium transition-colors hover:bg-surface2/50"
                 }
                 href="#"
               >

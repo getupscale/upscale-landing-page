@@ -13,17 +13,17 @@ export function AutopilotSection() {
             <h2 className="mb-6 font-serif text-4xl leading-tight md:text-5xl">
               Put operations on <span className="italic text-accent">autopilot</span>
             </h2>
-            <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
+            <p className="mb-8 text-lg text-text-muted">
               Upscale has the latest AI models built in, so it can help you identify revenue leakage and plug
               it instantly. No more manual CSV exports or endless dashboard checking.
             </p>
           </div>
 
           <div className="relative md:w-1/2">
-            <div className="relative z-10 mx-auto max-w-md rounded-2xl border border-gray-100 bg-white p-6 shadow-2xl dark:border-gray-800 dark:bg-surface-dark">
+            <div className="relative z-10 mx-auto max-w-md rounded-2xl border border-border bg-card p-6 text-card-foreground shadow-2xl">
               <div className="flex flex-col gap-4">
-                <div className="max-w-[85%] self-start rounded-2xl rounded-tl-none bg-gray-100 p-4 dark:bg-gray-800">
-                  <p className="text-sm text-gray-800 dark:text-gray-200">
+                <div className="max-w-[85%] self-start rounded-2xl rounded-tl-none bg-surface2/70 p-4">
+                  <p className="text-sm text-text-primary">
                     I noticed 5 enterprise renewals are at risk due to declining usage metrics this month.
                   </p>
                 </div>
@@ -31,7 +31,7 @@ export function AutopilotSection() {
                   <p className="text-sm">Generate a retention plan for each.</p>
                 </div>
                 <div className="w-full self-start">
-                  <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-900">
+                  <div className="rounded-xl border border-border bg-surface p-4 shadow-sm">
                     <div className="mb-3 flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <span className="material-symbols-outlined text-accent">description</span>
@@ -40,16 +40,16 @@ export function AutopilotSection() {
                       <span className="text-xs text-green-500">Ready</span>
                     </div>
                     <div className="space-y-2">
-                      <div className="flex items-center justify-between text-xs text-gray-500">
+                      <div className="flex items-center justify-between text-xs text-text-muted">
                         <span>Acme Corp</span>
                         <span className="text-red-500">High Risk</span>
                       </div>
-                      <div className="flex items-center justify-between text-xs text-gray-500">
+                      <div className="flex items-center justify-between text-xs text-text-muted">
                         <span>Globex</span>
                         <span className="text-yellow-500">Med Risk</span>
                       </div>
                     </div>
-                    <button className="mt-3 w-full rounded bg-gray-50 py-2 text-center text-xs font-medium transition-colors hover:bg-gray-100 dark:bg-gray-800">
+                    <button className="mt-3 w-full rounded bg-surface2/50 py-2 text-center text-xs font-medium text-text-primary transition-colors hover:bg-surface2">
                       View Details
                     </button>
                   </div>
