@@ -27,7 +27,7 @@ export function CtaSection() {
               type="button"
               onClick={openWaitlist}
               data-testid={WAITLIST_CTA_TESTIDS.ctaPrimary}
-              className="flex items-center justify-center rounded-full bg-primary px-8 py-4 font-bold text-white shadow-xl transition-transform hover:scale-105 hover:bg-gray-800"
+              className="flex items-center justify-center rounded-full bg-green px-8 py-4 font-bold text-white shadow-xl transition-transform hover:scale-105 hover:bg-gray-800"
             >
               <span className="material-symbols-outlined mr-2">bolt</span> 
               Get Early Access
