@@ -33,6 +33,12 @@ function ratelimit(ip: string) {
   (globalThis as unknown as { __waitlistRate?: Map<string, RateState> }).__waitlistRate = map;
 
   const now = Date.now();
+
+  // Prune expired entries to prevent unbounded memory growth
+  for (const [key, val] of map) {
+    if (val.resetAt <= now) map.delete(key);
+  }
+
   const state = map.get(ip);
   if (!state || state.resetAt <= now) {
     map.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
