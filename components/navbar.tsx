@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getNavbarShrinkPercent, getNavbarSideInsetPercent } from "@/lib/navbar-shrink";
 import { openWaitlist } from "@/components/waitlist/open-waitlist";
 import { WAITLIST_CTA_TESTIDS } from "@/lib/waitlist-config";
-import { ThemeToggle } from "@/components/ThemeToggle";
+// import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar() {
   const [shrinkPercent, setShrinkPercent] = useState(10);
@@ -43,8 +43,8 @@ export function Navbar() {
             <a className="text-sm font-medium text-text-muted transition-colors hover:text-text-primary" href="#faq">
               FAQ
             </a>
-            
-            <ThemeToggle/>
+
+            {/* <ThemeToggle/> */}
           </div>
         </div>
 
