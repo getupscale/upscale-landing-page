@@ -245,11 +245,13 @@ export function WaitlistModal() {
             </div>
           ) : (
             <>
-              {error ? (
-                <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900/30 dark:bg-red-950/30 dark:text-red-200">
-                  {error}
-                </div>
-              ) : null}
+              <div aria-live="polite" aria-atomic="true">
+                {error ? (
+                  <div role="alert" className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900/30 dark:bg-red-950/30 dark:text-red-200">
+                    {error}
+                  </div>
+                ) : null}
+              </div>
 
               {step === 0 ? (
                 <div>
