@@ -7,14 +7,16 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"]
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap"
 });
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   variable: "--font-instrument-serif",
   weight: ["400"],
-  style: ["normal", "italic"]
+  style: ["normal", "italic"],
+  display: "swap"
 });
 
 export const metadata: Metadata = {
