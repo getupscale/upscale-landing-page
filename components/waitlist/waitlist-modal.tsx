@@ -33,6 +33,7 @@ export function WaitlistModal() {
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const firstFieldRef = useRef<HTMLInputElement | null>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
 
   const [step, setStep] = useState(0);
   const [submitting, setSubmitting] = useState(false);
@@ -66,8 +67,13 @@ export function WaitlistModal() {
   }, []);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open) {
+      returnFocusRef.current?.focus();
+      returnFocusRef.current = null;
+      return;
+    }
     setError(null);
+    returnFocusRef.current = document.activeElement as HTMLElement | null;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
@@ -84,11 +90,42 @@ export function WaitlistModal() {
   useEffect(() => {
     if (!open) return;
 
+    const FOCUSABLE = [
+      "a[href]",
+      "button:not([disabled])",
+      "input:not([disabled])",
+      "select:not([disabled])",
+      "textarea:not([disabled])",
+      "[tabindex]:not([tabindex='-1'])"
+    ].join(",");
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         event.preventDefault();
         setOpen(false);
         window.dispatchEvent(new Event(WAITLIST_EVENTS.close));
+        return;
+      }
+
+      if (event.key === "Tab") {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+        const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE));
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey) {
+          if (document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+        return;
       }
 
       if (event.key !== "Enter") return;
@@ -199,13 +236,14 @@ export function WaitlistModal() {
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
+        aria-labelledby="waitlist-dialog-title"
         data-testid={WAITLIST_MODAL_TESTIDS.dialog}
         className="w-full max-w-xl overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-2xl"
       >
         <div className="flex items-center justify-between px-6 pb-4 pt-5">
           <div>
             <div className="text-xs font-medium uppercase tracking-wider text-text-muted">Waitlist</div>
-            <div className="font-serif text-2xl text-primary dark:text-text-dark">Get early access</div>
+            <div id="waitlist-dialog-title" className="font-serif text-2xl text-primary dark:text-text-dark">Get early access</div>
           </div>
           <button
             type="button"
