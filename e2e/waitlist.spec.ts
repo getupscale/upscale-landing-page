@@ -1,7 +1,7 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 import { WAITLIST_CTA_TESTIDS, WAITLIST_MODAL_TESTIDS } from "../lib/waitlist-config";
 
-async function openModal(page: Parameters<Parameters<typeof test>[1]>[0]) {
+async function openModal(page: Page) {
   await page.goto("/");
   await page.getByTestId(WAITLIST_CTA_TESTIDS.navbar).click();
   await expect(page.getByTestId(WAITLIST_MODAL_TESTIDS.dialog)).toBeVisible();
